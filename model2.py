@@ -15,7 +15,7 @@ train_dir = 'D:/Randy/semester 4 randy/citra digital/uas5/train2/'
 val_dir = 'D:/Randy/semester 4 randy/citra digital/uas5/valid2/'
 test_dir = 'D:/Randy/semester 4 randy/citra digital/uas5/test2/'
 model_dir = 'D:/Randy/semester 4 randy/citra digital/uas5/'
-model_path = os.path.join(model_dir, 'banana_ripeness_model3.h5')
+model_path = os.path.join(model_dir, 'banana_ripeness_model.h5')
 
 # Ensure the model directory exists
 os.makedirs(model_dir, exist_ok=True)
@@ -60,7 +60,7 @@ if os.path.exists(model_path):
 else:
     # Prepare the VGG19 model for transfer learning
     print("Preparing the VGG19 model...")
-    num_classes = 6  # Number of categories
+    num_classes = 7  # Number of categories
 
     base_model = VGG19(weights='imagenet', include_top=False, input_shape=(416, 416, 3))
 
